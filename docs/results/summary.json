@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "dataset": "support-agent-golden (13 examples, as of 2026-10-25)",
+    "agent": "fake:fake-support",
+    "judge": "fake:fake-judge",
+    "runner": "langsmith.evaluate",
+    "upload_results": "False"
+  },
+  "experiments": {
+    "v1": {
+      "name": "upbeat-noise-7",
+      "metrics": {
+        "correctness": 0.1923,
+        "groundedness": 1.0,
+        "helpfulness": 0.7692,
+        "policy_compliance": 0.5385,
+        "trajectory_strict": 0.1538,
+        "trajectory_subset": 1.0,
+        "trajectory_superset": 0.1538,
+        "trajectory_unordered": 0.1538,
+        "pass_rate": 0.1538,
+        "latency_p50_ms": 1.881,
+        "latency_p95_ms": 2.184,
+        "latency_mean_ms": 1.834,
+        "tokens_total": 1290.0,
+        "tokens_mean": 99.2,
+        "tool_calls_mean": 0.77,
+        "cost_usd": 0.0
+      }
+    },
+    "v2": {
+      "name": "essential-collar-45",
+      "metrics": {
+        "correctness": 1.0,
+        "groundedness": 1.0,
+        "helpfulness": 1.0,
+        "policy_compliance": 1.0,
+        "trajectory_strict": 1.0,
+        "trajectory_subset": 1.0,
+        "trajectory_superset": 1.0,
+        "trajectory_unordered": 1.0,
+        "pass_rate": 1.0,
+        "latency_p50_ms": 3.151,
+        "latency_p95_ms": 3.769,
+        "latency_mean_ms": 3.022,
+        "tokens_total": 5566.0,
+        "tokens_mean": 428.2,
+        "tool_calls_mean": 1.69,
+        "cost_usd": 0.0
+      }
+    }
+  },
+  "pairwise": {
+    "a": "v1",
+    "b": "v2",
+    "wins": {
+      "v1": 0,
+      "v2": 9,
+      "tie": 4
+    },
+    "per_example": [
+      {
+        "example_id": "q01",
+        "winner": "tie",
+        "a": 0.5,
+        "b": 0.5
+      },
+      {
+        "example_id": "q02",
+        "winner": "tie",
+        "a": 0.5,
+        "b": 0.5
+      },
+      {
+        "example_id": "q03",
+        "winner": "v2",
+        "a": 0.0,
+        "b": 1.0
+      },
+      {
+        "example_id": "q04",
+        "winner": "tie",
+        "a": 0.5,
+        "b": 0.5
+      },
+      {
+        "example_id": "q05",
+        "winner": "v2",
+        "a": 0.0,
+        "b": 1.0
+      },
+      {
+        "example_id": "q06",
+        "winner": "v2",
+        "a": 0.0,
+        "b": 1.0
+      },
+      {
+        "example_id": "q07",
+        "winner": "v2",
+        "a": 0.0,
+        "b": 1.0
+      },
+      {
+        "example_id": "q08",
+        "winner": "v2",
+        "a": 0.0,
+        "b": 1.0
+      },
+      {
+        "example_id": "q09",
+        "winner": "tie",
+        "a": 0.5,
+        "b": 0.5
+      },
+      {
+        "example_id": "q10",
+        "winner": "v2",
+        "a": 0.0,
+        "b": 1.0
+      },
+      {
+        "example_id": "q11",
+        "winner": "v2",
+        "a": 0.0,
+        "b": 1.0
+      },
+      {
+        "example_id": "q12",
+        "winner": "v2",
+        "a": 0.0,
+        "b": 1.0
+      },
+      {
+        "example_id": "q13",
+        "winner": "v2",
+        "a": 0.0,
+        "b": 1.0
+      }
+    ]
+  },
+  "gate": {
+    "passed": true,
+    "checks": [
+      {
+        "metric": "correctness",
+        "baseline": 1.0,
+        "current": 1.0,
+        "op": ">=",
+        "limit": 0.95,
+        "ok": true
+      },
+      {
+        "metric": "trajectory_superset",
+        "baseline": 1.0,
+        "current": 1.0,
+        "op": ">=",
+        "limit": 0.95,
+        "ok": true
+      },
+      {
+        "metric": "trajectory_strict",
+        "baseline": 1.0,
+        "current": 1.0,
+        "op": ">=",
+        "limit": 0.95,
+        "ok": true
+      },
+      {
+        "metric": "helpfulness",
+        "baseline": 1.0,
+        "current": 1.0,
+        "op": ">=",
+        "limit": 0.95,
+        "ok": true
+      },
+      {
+        "metric": "groundedness",
+        "baseline": 1.0,
+        "current": 1.0,
+        "op": ">=",
+        "limit": 0.95,
+        "ok": true
+      },
+      {
+        "metric": "policy_compliance",
+        "baseline": 1.0,
+        "current": 1.0,
+        "op": ">=",
+        "limit": 0.95,
+        "ok": true
+      },
+      {
+        "metric": "pass_rate",
+        "baseline": 1.0,
+        "current": 1.0,
+        "op": ">=",
+        "limit": 0.95,
+        "ok": true
+      },
+      {
+        "metric": "tokens_mean",
+        "baseline": 428.2,
+        "current": 428.2,
+        "op": "<=",
+        "limit": 642.3,
+        "ok": true
+      }
+    ]
+  }
+}

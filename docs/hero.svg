@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5b6787"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#0b1020"/>
+  <g font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+    <text x="72" y="104" fill="#e6e9f2" font-size="56" font-weight="700">langsmith-agent-evals</text>
+    <text x="72" y="150" fill="#9aa4bf" font-size="24">Evaluate a LangGraph agent with the LangSmith SDK, 100% offline</text>
+
+    <!-- dataset -->
+    <rect x="72" y="236" width="196" height="150" rx="14" fill="#121a33" stroke="#24304f" stroke-width="2"/>
+    <text x="170" y="276" fill="#e6e9f2" font-size="21" font-weight="700" text-anchor="middle">golden set</text>
+    <text x="170" y="308" fill="#9aa4bf" font-size="16" text-anchor="middle">13 questions</text>
+    <text x="170" y="332" fill="#9aa4bf" font-size="16" text-anchor="middle">reference answers</text>
+    <text x="170" y="356" fill="#9aa4bf" font-size="16" text-anchor="middle">tool trajectories</text>
+
+    <!-- agent -->
+    <rect x="324" y="216" width="270" height="190" rx="14" fill="#121a33" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="459" y="254" fill="#e6e9f2" font-size="21" font-weight="700" text-anchor="middle">LangGraph agent</text>
+    <rect x="350" y="280" width="96" height="44" rx="10" fill="#1b2546" stroke="#24304f"/>
+    <text x="398" y="308" fill="#e6e9f2" font-size="17" text-anchor="middle">model</text>
+    <rect x="472" y="280" width="96" height="44" rx="10" fill="#1b2546" stroke="#24304f"/>
+    <text x="520" y="308" fill="#e6e9f2" font-size="17" text-anchor="middle">tools</text>
+    <path d="M446 294 L468 294" stroke="#f59e0b" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M472 312 L450 312" stroke="#f59e0b" stroke-width="2" marker-end="url(#a)"/>
+    <text x="459" y="356" fill="#9aa4bf" font-size="15" text-anchor="middle">orders · policy · escalate</text>
+    <text x="459" y="382" fill="#9aa4bf" font-size="15" text-anchor="middle">prompt v1 vs v2</text>
+
+    <!-- evaluate -->
+    <rect x="650" y="196" width="300" height="230" rx="14" fill="#121a33" stroke="#24304f" stroke-width="2"/>
+    <text x="800" y="232" fill="#f59e0b" font-size="19" font-weight="700" text-anchor="middle">langsmith.evaluate()</text>
+    <text x="800" y="254" fill="#8b95b0" font-size="14" text-anchor="middle">upload_results=False · local examples</text>
+    <text x="676" y="282" fill="#e6e9f2" font-size="17">✓ correctness</text>
+    <text x="676" y="306" fill="#e6e9f2" font-size="17">✓ trajectory: strict · unordered</text>
+    <text x="697" y="328" fill="#e6e9f2" font-size="17">subset · superset</text>
+    <text x="676" y="356" fill="#e6e9f2" font-size="17">✓ LLM-as-judge critic (local)</text>
+    <text x="676" y="386" fill="#e6e9f2" font-size="17">✓ latency · tokens · cost</text>
+    <text x="676" y="412" fill="#e6e9f2" font-size="17">✓ pairwise A/B, both orders</text>
+
+    <!-- outputs -->
+    <rect x="1006" y="206" width="202" height="62" rx="12" fill="#121a33" stroke="#24304f" stroke-width="2"/>
+    <text x="1107" y="244" fill="#e6e9f2" font-size="18" text-anchor="middle">JSONL + traces</text>
+    <rect x="1006" y="282" width="202" height="62" rx="12" fill="#121a33" stroke="#24304f" stroke-width="2"/>
+    <text x="1107" y="320" fill="#e6e9f2" font-size="18" text-anchor="middle">HTML report</text>
+    <rect x="1006" y="358" width="202" height="62" rx="12" fill="#121a33" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="1107" y="396" fill="#f59e0b" font-size="18" font-weight="700" text-anchor="middle">CI regression gate</text>
+
+    <path d="M268 311 L318 311" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#a)"/>
+    <path d="M594 311 L644 311" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#a)"/>
+    <path d="M950 260 L1000 240" stroke="#f59e0b" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M950 311 L1000 311" stroke="#f59e0b" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M950 362 L1000 382" stroke="#f59e0b" stroke-width="2" marker-end="url(#a)"/>
+
+    <!-- optional upload -->
+    <path d="M800 426 L800 486" stroke="#5b6787" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#g)"/>
+    <rect x="640" y="492" width="320" height="52" rx="12" fill="none" stroke="#5b6787" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="800" y="524" fill="#8b95b0" font-size="17" text-anchor="middle">LangSmith cloud: optional, off</text>
+
+    <text x="72" y="590" fill="#9aa4bf" font-size="19">Runs 100% locally · ollama judge · openevals + agentevals · no paid APIs</text>
+  </g>
+</svg>

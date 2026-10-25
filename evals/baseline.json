@@ -1,0 +1,21 @@
+{
+  "floors": {
+    "correctness": 0.8,
+    "policy_compliance": 0.8
+  },
+  "max_ratio": {
+    "tokens_mean": 1.5
+  },
+  "metrics": {
+    "correctness": 1.0,
+    "groundedness": 1.0,
+    "helpfulness": 1.0,
+    "pass_rate": 1.0,
+    "policy_compliance": 1.0,
+    "tokens_mean": 428.2,
+    "trajectory_strict": 1.0,
+    "trajectory_superset": 1.0
+  },
+  "prompt": "v2",
+  "tolerance": 0.05
+}
